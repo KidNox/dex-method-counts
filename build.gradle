@@ -1,6 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
+repositories {
+  mavenCentral()
+}
+
 group = 'com.github.KidNox'
 
 mainClassName = "info.persistent.dex.Main"
