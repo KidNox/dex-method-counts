@@ -7,7 +7,11 @@ repositories {
 
 group = 'com.github.KidNox'
 
-mainClassName = "info.persistent.dex.Main"
+jar {
+    manifest {
+        attributes 'Main-Class': 'info.persistent.dex.Main'
+    }
+}
 
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'
