@@ -1,3 +1,12 @@
+repositories { 
+        jcenter()
+        maven { url "https://jitpack.io" }
+}
+
+dependencies {
+         compile 'com.github.jitpack:gradle-simple:1.0'
+}
+
 apply plugin: 'application'
 
 mainClassName = "info.persistent.dex.Main"
@@ -18,3 +27,5 @@ jar {
         attributes("Main-Class": mainClassName)
     }
 }
+
+
