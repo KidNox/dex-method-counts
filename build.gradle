@@ -3,29 +3,12 @@ repositories {
         maven { url "https://jitpack.io" }
 }
 
-dependencies {
-         compile 'com.github.jitpack:gradle-simple:1.0'
-}
-
 apply plugin: 'application'
+apply plugin: 'maven'
+
+group = 'com.github.KidNox'
 
 mainClassName = "info.persistent.dex.Main"
 
-// Match existing source structure
-sourceSets {
-    main {
-        java {
-            srcDir 'src'
-        }
-    }
-}
-
-jar {
-    // Redirect output to match launcher script
-    destinationDir = file('build/jar')
-    manifest {
-        attributes("Main-Class": mainClassName)
-    }
-}
 
 
